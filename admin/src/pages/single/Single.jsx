@@ -12,8 +12,8 @@ const Single = () => {
         <Navbar />
         <div className="top">
           <div className="left">
-            <div className="editButton">Editar</div>
-            <h1 className="title">Informação</h1>
+            <div className="editButton">Edit</div>
+            <h1 className="title">Information</h1>
             <div className="item">
               <img
                 src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
@@ -27,28 +27,28 @@ const Single = () => {
                   <span className="itemValue">janedoe@gmail.com</span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Telefone:</span>
-                  <span className="itemValue">+55 61 98289-0000</span>
+                  <span className="itemKey">Phone:</span>
+                  <span className="itemValue">+1 2345 67 89</span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Endereço:</span>
+                  <span className="itemKey">Address:</span>
                   <span className="itemValue">
-                    Rua 127 casa 247, Guará, Brasília, DF
+                    Elton St. 234 Garden Yd. NewYork
                   </span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">País:</span>
-                  <span className="itemValue">Brasil</span>
+                  <span className="itemKey">Country:</span>
+                  <span className="itemValue">USA</span>
                 </div>
               </div>
             </div>
           </div>
           <div className="right">
-            <Chart aspect={3 / 1} title="Gastos do usuário ( Últimos 6 meses)" />
+            <Chart aspect={3 / 1} title="User Spending ( Last 6 Months)" />
           </div>
         </div>
         <div className="bottom">
-        <h1 className="title">Últimas Transações</h1>
+        <h1 className="title">Last Transactions</h1>
           <List/>
         </div>
       </div>

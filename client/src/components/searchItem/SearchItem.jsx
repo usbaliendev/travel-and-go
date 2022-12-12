@@ -7,13 +7,13 @@ const SearchItem = ({ item }) => {
       <img src={item.photos[0]} alt="" className="siImg" />
       <div className="siDesc">
         <h1 className="siTitle">{item.name}</h1>
-        <span className="siDistance">{item.distance}metros do centro</span>
-        <span className="siTaxiOp">Taxi grátis ao aeroporto</span>
-        <span className="siSubtitle">
+        <span className="siDistance">{item.distance} do centro</span>
+        <span className="siTaxiOp">Transporte grátis ao aeroporto</span>
+        {/* <span className="siSubtitle">
           Apartamento com ar condicionado
-        </span>
+        </span> */}
         <span className="siFeatures">{item.desc}</span>
-        <span className="siCancelOp">Free cancellation </span>
+        <span className="siCancelOp">Cancelamento sem taxas</span>
         <span className="siCancelOpSubtitle">
           Você pode cancelar mais tarde, então reserve este preço hoje!
         </span>

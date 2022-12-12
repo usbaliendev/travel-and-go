@@ -1,23 +1,22 @@
 import "./widget.scss";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
+import HotelIcon from '@mui/icons-material/Hotel';
 
 const Widget = ({ type }) => {
   let data;
 
   //temporary
-  const amount = 100;
-  const diff = 20;
+  const amount = 20;
+  const diff = 5;
 
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "Usuários",
         isMoney: false,
-        link: "See all users",
+        link: "Ver usuários",
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -29,13 +28,13 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "order":
+    case "hoteis":
       data = {
-        title: "ORDERS",
+        title: "Hotéis",
         isMoney: false,
-        link: "View all orders",
+        link: "Ver hotéis",
         icon: (
-          <ShoppingCartOutlinedIcon
+          <MapsHomeWorkIcon
             className="icon"
             style={{
               backgroundColor: "rgba(218, 165, 32, 0.2)",
@@ -45,31 +44,15 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "earning":
+    case "quartos":
       data = {
-        title: "EARNINGS",
-        isMoney: true,
-        link: "View net earnings",
+        title: "Quartos",
+        isMoney: false,
+        link: "Ver quartos",
         icon: (
-          <MonetizationOnOutlinedIcon
+          <HotelIcon
             className="icon"
             style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
-          />
-        ),
-      };
-      break;
-    case "balance":
-      data = {
-        title: "BALANCE",
-        isMoney: true,
-        link: "See details",
-        icon: (
-          <AccountBalanceWalletOutlinedIcon
-            className="icon"
-            style={{
-              backgroundColor: "rgba(128, 0, 128, 0.2)",
-              color: "purple",
-            }}
           />
         ),
       };

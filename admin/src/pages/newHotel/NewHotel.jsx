@@ -25,7 +25,7 @@ const NewHotel = () => {
     );
     setRooms(value);
   };
-  
+
   console.log(files)
 
   const handleClick = async (e) => {
@@ -53,7 +53,8 @@ const NewHotel = () => {
       };
 
       await axios.post("/hotels", newhotel);
-    } catch (err) {console.log(err)}
+      window.location.href = '/hotels';
+    } catch (err) { console.log(err) }
   };
   return (
     <div className="new">
@@ -61,7 +62,7 @@ const NewHotel = () => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Adicionar Novo Produto</h1>
+          <h1>Adicionar novo hotel</h1>
         </div>
         <div className="bottom">
           <div className="left">
@@ -101,7 +102,7 @@ const NewHotel = () => {
                 </div>
               ))}
               <div className="formInput">
-                <label>Destaques</label>
+                <label>Visivel nos Destaques</label>
                 <select id="featured" onChange={handleChange}>
                   <option value={false}>Não</option>
                   <option value={true}>Sim</option>
@@ -111,13 +112,13 @@ const NewHotel = () => {
                 <label>Quartos</label>
                 <select id="rooms" multiple onChange={handleSelect}>
                   {loading
-                    ? "Pesquisando..."
+                    ? "loading"
                     : data &&
-                      data.map((room) => (
-                        <option key={room._id} value={room._id}>
-                          {room.title}
-                        </option>
-                      ))}
+                    data.map((room) => (
+                      <option key={room._id} value={room._id}>
+                        {room.title}
+                      </option>
+                    ))}
                 </select>
               </div>
               <button onClick={handleClick}>Enviar</button>

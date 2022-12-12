@@ -32,6 +32,7 @@ const New = ({ inputs, title }) => {
       };
 
       await axios.post("/auth/register", newUser);
+      window.location.href = '/users';
     } catch (err) {
       console.log(err);
     }
@@ -61,7 +62,7 @@ const New = ({ inputs, title }) => {
             <form>
               <div className="formInput">
                 <label htmlFor="file">
-                  Image: <DriveFolderUploadOutlinedIcon className="icon" />
+                  Imagem: <DriveFolderUploadOutlinedIcon className="icon" />
                 </label>
                 <input
                   type="file"

@@ -108,7 +108,7 @@ const Hotel = () => {
               Localização excelente – {data.distance} metros do centro
             </span>
             <span className="hotelPriceHighlight">
-              Reserve um pernoite R${data.cheapestPrice} nesta propriedade e obter um táxi gratuito para o aeroporto
+              Reserve um pernoite R${data.cheapestPrice} nesta propriedade e obtenha uma corrida gratuita para o aeroporto
             </span>
             <div className="hotelImages">
               {data.photos?.map((photo, i) => (
@@ -128,13 +128,13 @@ const Hotel = () => {
                 <p className="hotelDesc">{data.desc}</p>
               </div>
               <div className="hotelDetailsPrice">
-                <h1>Perfeito para {days}-dias de estadia!</h1>
+                <h1>Perfeito para {days}-dia(s) de estadia!</h1>
                 <span>
-                  Localização privilegiada, esta propriedade tem uma excelente pontuação de localização de 9.8!
+                  Você pode cancelar mais tarde, então reserve este preço hoje!
                 </span>
                 <h2>
-                  <b>${days * data.cheapestPrice * options.room}</b> ({days}{" "}
-                  noites)
+                  <b>R$ {days * data.cheapestPrice * options.room}</b> ({days}{" "}
+                  dia(s))
                 </h2>
                 <button onClick={handleClick}>Reserve agora!</button>
               </div>

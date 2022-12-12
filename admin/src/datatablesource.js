@@ -2,8 +2,8 @@ export const userColumns = [
   { field: "_id", headerName: "ID", width: 70 },
   {
     field: "user",
-    headerName: "User",
-    width: 230,
+    headerName: "Usuário",
+    width: 175,
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
@@ -16,47 +16,47 @@ export const userColumns = [
   {
     field: "email",
     headerName: "Email",
-    width: 230,
+    width: 225,
   },
 
   {
     field: "country",
-    headerName: "Country",
+    headerName: "País",
     width: 100,
   },
   {
     field: "city",
-    headerName: "City",
+    headerName: "Cidade",
     width: 100,
   },
   {
     field: "phone",
-    headerName: "Phone",
-    width: 100,
+    headerName: "Telefone",
+    width: 150,
   },
 ];
 
 export const hotelColumns = [
-  { field: "_id", headerName: "ID", width: 250 },
+  { field: "_id", headerName: "ID", width: 70 },
   {
     field: "name",
-    headerName: "Name",
-    width: 150,
+    headerName: "Nome",
+    width: 200,
   },
   {
     field: "type",
-    headerName: "Type",
-    width: 100,
+    headerName: "Tipo",
+    width: 150,
   },
   {
     field: "title",
-    headerName: "Title",
+    headerName: "Descrição",
     width: 230,
   },
   {
     field: "city",
-    headerName: "City",
-    width: 100,
+    headerName: "Cidade",
+    width: 150,
   },
 ];
 
@@ -64,22 +64,26 @@ export const roomColumns = [
   { field: "_id", headerName: "ID", width: 70 },
   {
     field: "title",
-    headerName: "Title",
+    headerName: "Título",
+    align:'center',
     width: 230,
   },
   {
     field: "desc",
-    headerName: "Description",
+    headerName: "Descrição",
+    align:'center',
     width: 200,
   },
   {
     field: "price",
-    headerName: "Price",
-    width: 100,
+    headerName: "Preço",
+    align:'center',
+    width: 125,
   },
   {
     field: "maxPeople",
-    headerName: "Max People",
+    headerName: "Max Pessoas",
     width: 100,
+    align:'center'
   },
 ];

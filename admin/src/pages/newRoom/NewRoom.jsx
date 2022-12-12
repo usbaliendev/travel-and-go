@@ -23,6 +23,7 @@ const NewRoom = () => {
     const roomNumbers = rooms.split(",").map((room) => ({ number: room }));
     try {
       await axios.post(`/rooms/${hotelId}`, { ...info, roomNumbers });
+      window.location.href = '/rooms';
     } catch (err) {
       console.log(err);
     }
@@ -35,7 +36,7 @@ const NewRoom = () => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Adicionar Novo Quarto</h1>
+          <h1>Adicionar novo quarto</h1>
         </div>
         <div className="bottom">
           <div className="right">
@@ -55,21 +56,21 @@ const NewRoom = () => {
                 <label>Quartos</label>
                 <textarea
                   onChange={(e) => setRooms(e.target.value)}
-                  placeholder="give comma between room numbers."
+                  placeholder="dar número dos quartos entre vírgulas sem espaço."
                 />
               </div>
               <div className="formInput">
-                <label>Escolha um hotel</label>
+                <label>Escolha um hotél</label>
                 <select
                   id="hotelId"
                   onChange={(e) => setHotelId(e.target.value)}
                 >
                   {loading
-                    ? "Pesquisando..."
+                    ? "loading"
                     : data &&
-                      data.map((hotel) => (
-                        <option key={hotel._id} value={hotel._id}>{hotel.name}</option>
-                      ))}
+                    data.map((hotel) => (
+                      <option key={hotel._id} value={hotel._id}>{hotel.name}</option>
+                    ))}
                 </select>
               </div>
               <button onClick={handleClick}>Enviar</button>

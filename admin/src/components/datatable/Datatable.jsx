@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
 
-const Datatable = ({columns}) => {
+const Datatable = ({ columns }) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
-  const [list, setList] = useState();
   const { data, loading, error } = useFetch(`/${path}`);
+  const [list, setList] = useState(data);
 
   useEffect(() => {
     setList(data);
@@ -20,19 +20,19 @@ const Datatable = ({columns}) => {
     try {
       await axios.delete(`/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
-    } catch (err) {}
+    } catch (err) { }
   };
 
   const actionColumn = [
     {
       field: "action",
-      headerName: "Action",
-      width: 200,
+      headerName: "Ações",
+      width: 130,
       renderCell: (params) => {
         return (
           <div className="cellAction">
             <Link to="/users/test" style={{ textDecoration: "none" }}>
-              <div className="viewButton">Vizualizar</div>
+              <div className="viewButton">Ver</div>
             </Link>
             <div
               className="deleteButton"
@@ -48,14 +48,19 @@ const Datatable = ({columns}) => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        {path}
+        {
+          path === "users" ? "Usuários"
+            : path === "hotels" ? "Hoteis"
+              : path === "rooms" ? "Quartos" : ""
+        }
         <Link to={`/${path}/new`} className="link">
-          Adicionar novo
+          Adicionar
         </Link>
       </div>
       <DataGrid
         className="datagrid"
         rows={list}
+        // rows={data}
         columns={columns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}

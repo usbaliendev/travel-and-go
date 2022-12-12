@@ -1,21 +1,11 @@
-.logintitle{
-  padding: 10px 0 0 20px;
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: 500;
-  background-color: #0071c2;
-  color: #fff;
-}
-
 .login {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .lContainer {
-  width: 30%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -24,7 +14,6 @@
 .lInput{
   height: 30px;
   padding: 10px;
-  border-radius: 10px;
 }
 
 .lButton {

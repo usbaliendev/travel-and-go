@@ -40,36 +40,28 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div>
-        <div className="logintitle">
-          <h1>Travel and Go Login</h1>
-        </div>
+    <div className="login">
+      <div className="lContainer">
+        <input
+          type="text"
+          placeholder="username"
+          id="username"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <input
+          type="password"
+          placeholder="senha"
+          id="password"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <button disabled={loading} onClick={handleClick} className="lButton">
+          Logar
+        </button>
+        {error && <span>{error.message}</span>}
       </div>
-      <div className="login">
-        <div className="lContainer">
-          <input
-            type="text"
-            placeholder="usuário"
-            id="username"
-            onChange={handleChange}
-            className="lInput"
-          />
-          <input
-            type="password"
-            placeholder="senha"
-            id="password"
-            onChange={handleChange}
-            className="lInput"
-          />
-          <button disabled={loading} onClick={handleClick} className="lButton">
-            Login
-          </button>
-          {error && <span>{error.message}</span>}
-        </div>
-      </div>
-    </>
-
+    </div>
   );
 };
 

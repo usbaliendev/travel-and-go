@@ -61,7 +61,7 @@ function App() {
                 path="new"
                 element={
                   <ProtectedRoute>
-                    <New inputs={userInputs} title="Add New User" />
+                    <New inputs={userInputs} title="Adicionar novo usuário" />
                   </ProtectedRoute>
                 }
               />

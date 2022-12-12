@@ -158,18 +158,12 @@ $ npm start
 
 <table style="width:100%">
   <tr align=center>
-    <th><strong>Travel and Go</strong></th>
-    <th><strong>diego3g</strong></th>
+    <th><strong>usbangelo</strong></th>
   </tr>
   <tr align=center>
     <td>
       <a href="https://github.com/usbangelo">
         <img width="200" height="180" src="https://avatars.githubusercontent.com/u/50382278?v=4">
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/maykbrito">
-        <img width="200" height="180" src="https://user-images.githubusercontent.com/38081852/83981753-1de29b00-a8f7-11ea-93cf-23d2ff65fa5c.png">
       </a>
     </td>
   </tr>

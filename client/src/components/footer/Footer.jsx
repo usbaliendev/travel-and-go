@@ -38,7 +38,7 @@ const Footer = () => {
           <li className="fListItem">Termos e condições</li>
         </ul>
       </div>
-      <div className="fText">Copyright © 2022 VouDeBooking</div>
+      <div className="fText">Copyright © 2023 TravelandGo</div>
     </div>
   );
 };

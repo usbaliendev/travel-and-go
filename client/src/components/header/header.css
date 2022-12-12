@@ -1,6 +1,6 @@
 .header {
-  background-color: #42858C;
-  color: white;
+  background-color: #131127;
+  color: #EEA41C;
   display: flex;
   justify-content: center;
   position: relative;
@@ -29,10 +29,9 @@
 }
 
 .headerListItem.active {
-  border: 2px solid white;
   padding: 10px;
   border-radius: 20px;
-  background-color: #0071c2;
+  background-color: #1D2B49;
 }
 
 .headerDesc {
@@ -40,7 +39,7 @@
 }
 
 .headerBtn {
-  background-color: #0071c2;
+  background-color: #EEA41C;
   color: white;
   font-weight: 500;
   border-radius: 20px;
@@ -52,7 +51,7 @@
 .headerSearch {
   height: 30px;
   background-color: white;
-  border: 3px solid #febb02;
+  border: 3px solid #131127;
   display: flex;
   align-items: center;
   justify-content: space-around;

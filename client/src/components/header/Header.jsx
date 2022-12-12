@@ -89,9 +89,9 @@ const Header = ({ type }) => {
               Descontos pra vida toda? Adorei
             </h1>
             <p className="headerDesc">
-              Seja recompensado por suas viagens – desbloqueie descontos instantâneos de 10% ou mais com uma conta de VouDeBooking
+              Seja recompensado por suas viagens – desbloqueie descontos instantâneos de 10% ou mais com uma conta de Travel and Go
             </p>
-            {!user && <button className="headerBtn">Logar / Registrar</button>}
+            {/*{!user && <button className="headerBtn">Logar / Registrar</button>}*/}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
